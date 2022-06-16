@@ -1,2 +1,5 @@
 <?php 
-    include "index.html";
+    // print_r($_SERVER);
+    // echo phpversion();
+
+    include "page.html";

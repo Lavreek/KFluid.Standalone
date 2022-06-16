@@ -4,8 +4,8 @@ body {
 }
 
 .services-icons li + li {
-				margin-left: 15%;
-			}
+	margin-left: 10%;
+}
 			.carousel:hover .carousel-control-prev,  .carousel:hover .carousel-control-next {
 				transition: .5s;
 				background: rgba(0, 0, 0, .4);
