@@ -1,3 +1,0 @@
-Bootstrap
-http://getbootstrap.com/
-
