@@ -172,15 +172,25 @@ body {
 }
 
 .link-phone {
+	padding: 0px!important;
 	transition: 1s;
 	color: rgba(0, 0, 0, .7);
 	text-decoration: none;
 }
 
 .link-mail {
+	padding: 0px!important;
 	transition: 1s;
 	color: rgba(0, 0, 0, .7);
 	text-decoration: none;
+}
+
+.link-phone-label::before {
+	content: "Телефон: ";
+}
+
+.link-mail-label::before {
+	content: "Email: ";
 }
 
 .link-phone:hover, .link-mail:hover {
