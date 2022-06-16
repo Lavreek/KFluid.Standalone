@@ -167,3 +167,23 @@ body {
 	transition: .5s;
 	fill: rgba(255, 255, 255, .8);
 }
+.nav-link-phone::before {
+	content: "Телефон: ";
+}
+
+.link-phone {
+	transition: 1s;
+	color: rgba(0, 0, 0, .7);
+	text-decoration: none;
+}
+
+.link-mail {
+	transition: 1s;
+	color: rgba(0, 0, 0, .7);
+	text-decoration: none;
+}
+
+.link-phone:hover, .link-mail:hover {
+	transition: .5s;
+	color: rgba(0, 0, 0, .9);
+}
