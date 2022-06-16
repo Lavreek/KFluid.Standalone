@@ -5,5 +5,6 @@
 # Используемые компоненты
 
 <ul>
-	<li><a href="https://getbootstrap.com">Bootstrap</a></li>
+	<li>Стили и анимации: <a href="https://getbootstrap.com">Bootstrap</a></li>
+	<li>Анимации и взаимодействия: <a href="https://jquery.com/">jQuery</a></li>
 </ul>
