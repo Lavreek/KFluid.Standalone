@@ -1,0 +1,52 @@
+<div class='container'>
+	<div class='row justify-content-center'>
+		<div class='col-md-5 px-4'>
+			<form method='POST' action='./append/' enctype="multipart/form-data">
+				<input type='hidden' name='add'>
+				<input type='hidden' name='img_src'>
+
+				<div class='mb-3'>
+					<label for='exampleDataList' class='form-label'>Раздел</label>
+					<input class='form-control' list='datalistOptions' id='exampleDataList' name='section' placeholder='Напишите, чтобы найти...'>
+					<datalist id='datalistOptions'>
+						<option value='services'>
+					</datalist>
+				</div>
+				<div class='mb-3'>
+					<label for='ImageInput' class='form-label'>Фотоэлемент</label>
+					<input type='file' class='form-control' name="img_file">
+				</div>
+				<div class='mb-3'>
+					<label for='HeaderInput-add' class='form-label'>Заголовок</label>
+					<input type='text' class='form-control' id='HeaderInput-add' name='header' placeholder='Название заголовка'>
+				</div>
+				<div class='mb-3'>
+					<label for='TextareaInput' class='form-label'>Описание</label>
+					<textarea class='form-control' id='TextareaInput' name="description"></textarea>
+				</div>
+				<div class='mb-3'>
+					<button class='btn btn-primary' type='submit'>Добавить</button>
+				</div>
+			</form>
+		</div>
+		<div class='col-md-5 px-4'>
+			<form method='POST' action='./append/'>
+				<input type='hidden' name='delete'>
+				<div class='mb-3'>
+					<label for='exampleDataList' class='form-label'>Раздел</label>
+					<input class='form-control' list='datalistOptions' id='exampleDataList' name='section' placeholder='Напишите, чтобы найти...'>
+					<datalist id='datalistOptions'>
+						<option value='services'>
+					</datalist>
+				</div>
+				<div class='mb-3'>
+					<label for='HeaderInput-delete' class='form-label'>Заголовок</label>
+					<input type='text' class='form-control' id='HeaderInput-delete' name='header' placeholder='Название заголовка'>
+				</div>
+				<div class='mb-3'>
+					<button class='btn btn-primary' type='submit'>Удалить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

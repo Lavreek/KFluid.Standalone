@@ -57,84 +57,9 @@
 					<hr style="width: 18%; border: solid 2px red;">
 				</div>
 				<div class="row row-cols-1 row-cols-md-2 g-4 py-5">
-					<div class="col">
-						<div class="row justify-content-center">
-							<div class="container col text-center">
-								<img class="rounded-circle" src="/assets/images/fittings-main.png">
-							</div>
-							<div class="col col-md-8 py-4">
-								<div class="card-body">
-									<h5 class="card-title mb-3">Фитинги для труб</h5>
-									<p class="card-text">Фитингами называют соединительные элементы трубопроводов, уголки, тройники, разветвители, переходы на резьбу, штуцеры, футорки, бобышки и прочие переходники и адапторы позволяющие присоединять друг к другу разные части газовых и гидравлических систем.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row justify-content-center">
-							<div class="container col text-center">
-								<img class="rounded-circle" src="/assets/images/valves.png">
-							</div>
-							<div class="col col-md-8 py-4">
-								<div class="card-body">
-									<h5 class="card-title mb-3">Клапаны</h5>
-									<p class="card-text">Если Вам необходимо просто закрыть или открыть поток газа/жидкости и сделать это быстро, то воспользуйтесь запорными клапанами к которым относятся шаровые краны, соленоидные, сильфонные или мембранные клапаны. Если стоит задача регулирования потока, плавного открытия или постепенного уменьшения/увеличения пропускной способности трубопровода, то необходимо воспользоваться игольчатыми вентилями или шиберными затворами в зависимости от диаметра трубопровода и среды.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="row justify-content-center">
-							<div class="container col text-center">
-								<img class="rounded-circle" src="/assets/images/regulatory_main.png">
-							</div>
-							<div class="col col-md-8 py-4">
-								<div class="card-body">
-									<h5 class="card-title mb-3">Регуляторы давления</h5>
-									<p class="card-text">Регулятор давления - это клапан, который регулирует давление жидкости или газа до желаемого значения. Регуляторы используются для газов и жидкостей и могут быть единым устройством с установкой давления, ограничителем и датчиком в одном корпусе или состоять из отдельного датчика давления, регулятора и проточного клапана.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				  	<div class="col">
-						<div class="row justify-content-center">
-							<div class="container col text-center">
-								<img class="rounded-circle" src="/assets/images/zazhimy-truby-rukava.jpg">
-							</div>
-							<div class="col col-md-8 py-4">
-								<div class="card-body">
-									<h5 class="card-title mb-3">Зажимы, трубы, рукава и аксессуары</h5>
-									<p class="card-text text-muted">Зажимы, трубы, рукава и аксессуары.</p>
-								</div>
-							</div>
-						</div>
-				  	</div>
-				  	<div class="col">
-						<div class="row justify-content-center">
-							<div class="container col text-center">
-								<img class="rounded-circle" src="/assets/images/ballon.png">
-							</div>
-							<div class="col col-md-8 py-4">
-								<div class="card-body">
-									<h5 class="card-title mb-3">Газовые баллоны и сосуды</h5>
-									<p class="card-text text-muted">Газовые баллоны и сосуды.</p>
-								</div>
-							</div>
-						</div>
-				  	</div>
-				  	<div class="col">
-						<div class="row justify-content-center">
-							<div class="container col text-center">
-								<img class="rounded-circle" src="/assets/images/manometry_main.png">
-							</div>
-							<div class="col col-md-8 py-4">
-								<div class="card-body">
-									<h5 class="card-title mb-3">Контрольно-измерительные приборы</h5>
-									<p class="card-text text-muted">Контрольно-измерительные приборы.</p>
-								</div>
-							</div>
-						</div>
-				  	</div>
+					<?php
+						$component->get_resource("services");
+					?>
 				</div>
 			</div>
 			<!-- Services -->
@@ -154,7 +79,7 @@
 						height: 256px;
 					}
 				</style>
-				<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="false">
+				<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
