@@ -22,20 +22,20 @@
 	<li>json_remove</li>
 </ul>
 
-!! Обратите внимание на <b>!self::debug!</b> класса ComponentController !!
+!! Обратите внимание на <b>self::debug</b> класса <b>ComponentController</b> !!
 
 Чтобы взаимодействовать с контроллером был добавлен небольшой ограничитель
 
-const debug = true;
+>const debug = true;
 
 # Хранение данных
 
 Данные хранятся посредством json строки в файлах разделённых на категории.
 
-Формат строки
+<li>Формат строки</li>
 
-Array = [
-	'img_src' => 'путь до файла', (CAN BE NULL)
-	'header' => 'заголовок', (NOT NULL)
-	'description' => 'описание', (CAN BE NULL)
+Array = [<br>
+>'img_src' => 'путь до файла', (CAN BE NULL)<br>
+>'header' => 'заголовок', (NOT NULL)<br>
+>'description' => 'описание', (CAN BE NULL)<br>
 ]
