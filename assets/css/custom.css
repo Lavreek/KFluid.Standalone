@@ -196,3 +196,9 @@ body {
 	transition: .5s;
 	color: rgba(0, 0, 0, .9);
 }
+
+.carousel-item-partners img {
+	margin-bottom: 15%;
+	width: 256px;
+	height: 256px;
+}

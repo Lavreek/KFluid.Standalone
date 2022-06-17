@@ -1,8 +1,10 @@
 <?php
+	require_once __DIR__."/ImageController.php";
+
 	/**
 	 * Управление и размножение элементов в page.html
 	 */
-	class ComponentController
+	class ComponentController extends ImageController
 	{
 		const debug = true;
 
@@ -11,8 +13,6 @@
 			"services" => __DIR__."/services/services",
 			"partners" => __DIR__."/partners/partners",
 		];
-
-		function __construct() { }
 
 		public function get_resource(string $filekey)
 		{
@@ -45,7 +45,8 @@
 
 		public function json_append(array $append, string $filekey)
 		{
-			if (self::debug) {
+			if (self::debug)
+			{
 				if (isset(self::filepath[$filekey]))
 				{
 					$filepath = $this->file_alive(self::filepath[$filekey]);
@@ -61,7 +62,8 @@
 
 		public function json_remove(string $header, string $filekey)
 		{
-			if (self::debug) {
+			if (self::debug) 
+			{
 				if (isset(self::filepath[$filekey]))
 				{
 					$filepath = $this->file_alive(self::filepath[$filekey]);

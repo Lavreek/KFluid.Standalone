@@ -9,27 +9,12 @@
 
 		if (!empty($_POST['section']) && !empty($_POST['header']))
 		{
+			$section = $_POST['section']; unset($_POST['section']);
+
 			if (isset($_FILES['img_file']))
 			{
-				$filepath = $_FILES['img_file']['tmp_name'];
-				$destination = "assets/images/".$_POST['section']."/";
-				$destination_full = __DIR__."/../".$destination;
-				$filename = basename($_FILES['img_file']['name']);
-
-				if (!is_dir($destination_full))
-				{
-					mkdir($destination_full, 0777, false);
-				}
-
-				if (is_file($destination_full.$filename))
-					unlink($destination_full.$filename);
-
-				move_uploaded_file($filepath, $destination_full.$filename);
-
-				$_POST['img_src'] = "/".$destination.$filename;
+				$_POST['img_src'] = $component->download_image($_FILES['img_file'], $section);
 			}
-
-			$section = $_POST['section']; unset($_POST['section']);
 
 			$component->json_append($_POST, $section);
 		}

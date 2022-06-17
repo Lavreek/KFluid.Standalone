@@ -1,6 +1,7 @@
 # Fluid.kz
 
-<a href="https://fluid.kz/">Сайт проекта</a>
+Cайт проекта: <a href="https://fluid.kz/">https://fluid.kz/</a>
+github: https://github.com/Lavreek/fluid_kz
 
 # Используемые компоненты
 
@@ -11,9 +12,13 @@
 
 # ADD and REMOVE
 
+Изначально готовая страница для добавления
+
+>example.com/<b>append</b>/
+
 Если вы посмотрите в контроллер:
 
->>/modal/ComponentController.php
+>/modal/ComponentController.php
 
 То можно будет обнаружить функции хранения данных.
 
@@ -34,8 +39,4 @@
 
 <li>Формат строки</li>
 
-Array = [<br>
->'img_src' => 'путь до файла', (CAN BE NULL)<br>
->'header' => 'заголовок', (NOT NULL)<br>
->'description' => 'описание', (CAN BE NULL)
-<br>]
+>Array = [<br>'img_src' => 'путь до файла', (CAN BE NULL)<br>'header' => 'заголовок', (NOT NULL)<br>'description' => 'описание', (CAN BE NULL)<br>]
