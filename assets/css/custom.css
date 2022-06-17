@@ -105,8 +105,7 @@ body {
 
 			.bi-arrow-up-circle-fill {
 				transition: 1s;
-				fill: rgba(0, 0, 0, 1);
-				opacity: .5;
+				opacity: 0;
 			}
 
 			.bi-arrow-up-circle-fill:hover {

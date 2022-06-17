@@ -7,45 +7,40 @@
 		const debug = true;
 
 		const filepath = [
-			"services" => __DIR__."/Services/services",
+			"preview" => __DIR__."/preview/preview",
+			"services" => __DIR__."/services/services",
+			"partners" => __DIR__."/partners/partners",
 		];
 
 		function __construct() { }
 
 		public function get_resource(string $filekey)
 		{
-			$filepath = self::filepath[$filekey];
+			$filepath = $this->file_alive(self::filepath[$filekey]);
 
 			$services = json_decode(file_get_contents($filepath));
 
-			foreach ($services as $element)
-			{
-				$this->layout_services($filekey, $element->img_src, $element->header, $element->description);
-			}
+			$this->layout_services($filekey, $services);
 		}
 
-		private function layout_services(string $filekey, string $img_src, string $header, string $description)
+		private function layout_services(string $filekey, array $services)
 		{
-			if ($description == "")
-				$description = "<p class='card-text text-muted'>$header</p>";
-			
-			else
-				$description = "<p class='card-text'>$description</p>";
+			switch ($filekey) {
+				case 'services':
+					include __DIR__."/layouts/services.php";
+					break;
 
-			echo "
-<div class='col'>
-	<div class='row justify-content-center'>
-		<div class='container col text-center'>
-			<img class='rounded-circle' src='$img_src'>
-		</div>
-		<div class='col col-md-8 py-4'>
-			<div class='card-body'>
-				<h5 class='card-title mb-3'>$header</h5>
-				$description
-			</div>
-		</div>
-	</div>
-</div>";
+				case 'partners':
+					include __DIR__."/layouts/partners.php";
+					break;
+
+				case 'preview':
+					include __DIR__."/layouts/preview.php";
+					break;
+				
+				default:
+					break;
+			}
 		}
 
 		public function json_append(array $append, string $filekey)
@@ -53,8 +48,8 @@
 			if (self::debug) {
 				if (isset(self::filepath[$filekey]))
 				{
-					$filepath = self::filepath[$filekey];
-
+					$filepath = $this->file_alive(self::filepath[$filekey]);
+					
 					$file_content = json_decode(file_get_contents($filepath));
 
 					array_push($file_content, $append);
@@ -69,7 +64,7 @@
 			if (self::debug) {
 				if (isset(self::filepath[$filekey]))
 				{
-					$filepath = self::filepath[$filekey];
+					$filepath = $this->file_alive(self::filepath[$filekey]);
 
 					$file_content = json_decode(file_get_contents($filepath));
 
@@ -78,7 +73,8 @@
 						if ($value->header == $header)
 						{
 							if (!empty($value->img_src))
-								unlink(__DIR__."/../".$value->img_src);
+								if(!is_dir($value->img_src))
+									unlink(__DIR__."/../".$value->img_src);
 
 							unset($file_content[$key]);
 						}
@@ -96,5 +92,22 @@
 			
 			else
 				echo "<script>window.location.replace('../');</script>";
+		}
+
+		private function file_alive(string $filepath)
+		{	
+			$dir = explode("/", $filepath)[1];
+			$path = __DIR__."/".$dir;
+
+			if (!is_dir($path))
+				mkdir($path);
+			
+			if (!file_exists($filepath))
+			{
+				touch($filepath);
+				file_put_contents($filepath, json_encode([]));
+			}
+
+			return $filepath;
 		}
 	}

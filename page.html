@@ -2,46 +2,30 @@
 <html>
 	<head>
 		<?php include(__DIR__.'/assets/head.html'); ?>
+
+		<style type="text/css">
+			.carousel-item-partners img {
+				margin-bottom: 15%;
+				width: 256px;
+				height: 256px;
+			}
+		</style>
 	</head>
 	<body class="container-fluid">
 		<div data-spy="scroll" data-offset="0">
     		
     		<?php include(__DIR__."/assets/header.html") ?>
+
     		<!-- Preview Carousel -->
-    		<div id="carouselExampleIndicators" class="carousel slide carousel-fade bg-transpanent" data-bs-ride="true" style="">
-    			<div class="carousel-indicators">
-    				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    			</div>
-    			<div class="carousel-inner">
-    				<div class="carousel-item active">
-    					<!-- <div class="row justify-content-center"> -->
-    						<div class="col-md-auto" style="height: 500px;">
-    							<img src="/assets/images/img_bg_1.jpg" class="d-block p-5 w-100 ">
-    							<!-- <div class="carousel-caption d-none d-md-block"> -->
-    								<!-- <h5 class="">1 slide</h5> -->
-    								<!-- <p class="">Some representative placeholder content for the first slide.</p> -->
-    							<!-- </div> -->
-    						</div>
-    					<!-- </div> -->
-    				</div>
-				    <div class="carousel-item">
-			    		<div class="col-md-auto" style="height: 500px;">
-			    			<img src="/assets/images/img_bg_2.jpg" class="d-block p-5 w-100 carousel-image">
-			    		</div>
-				    </div>
-				    <div class="carousel-item">
-			    		<div class="col-md-auto" style="height: 500px;">
-			    			<img src="/assets/images/img_bg_3.jpg" class="d-block p-5 w-100 carousel-image">
-			    		</div>
-				    </div>
-				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    		<div id="preview" class="carousel slide carousel-fade bg-transpanent" data-bs-ride="true">
+    			
+				<?php $component->get_resource("preview"); ?>
+
+				<button class="carousel-control-prev" type="button" data-bs-target="#preview" data-bs-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Previous</span>
 				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<button class="carousel-control-next" type="button" data-bs-target="#preview" data-bs-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Next</span>
 				</button>
@@ -57,67 +41,25 @@
 					<hr style="width: 18%; border: solid 2px red;">
 				</div>
 				<div class="row row-cols-1 row-cols-md-2 g-4 py-5">
-					<?php
-						$component->get_resource("services");
-					?>
+
+					<?php $component->get_resource("services"); ?>
+
 				</div>
 			</div>
 			<!-- Services -->
 
 			<!-- Partners -->
-			<div class="container-fluid text-center" id="about" data-section="about">
+			<div class="container-fluid text-center" id="partners">
 				<div class="jumbotron text-center py-5">
 					<h1 class="display-4">Наши Партнёры и клиенты</h1>
 					<!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
 					<hr class="my-4">
 					<!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
 				</div>
-				<style type="text/css">
-					.carousel-item-partners img {
-						margin-bottom: 15%;
-						width: 256px;
-						height: 256px;
-					}
-				</style>
 				<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
 
+					<?php $component->get_resource("partners"); ?>
 
-					</div>
-					<div class="carousel-inner">
-						<div class="carousel-item carousel-item-partners active">
-							<img src="/assets/images/5feabff6068ba.jpg" class="" width="140" >
-							<div class="carousel-caption d-none d-md-block">
-								<h5>ASIA Techno Complect</h5>
-								<p>Продвижение высококачественного оборудования лучших мировых производителей.</p>
-							</div>
-						</div>
-					    <div class="carousel-item carousel-item-partners">
-							<img src="/assets/images/logo_p2.png" class="" width="140">
-					    	<div class="carousel-caption d-none d-md-block">
-					    		<h5>ASTECO GROUP</h5>
-					    		<p>Комплексные решения для различных отраслей промышленности.</p>
-					    	</div>
-					    </div>
-					    <div class="carousel-item carousel-item-partners">
-							<img src="/assets/images/f5d87bb8f422b8a9247f423e5472ef55.jpg" class="" width="140">
-					    	<div class="carousel-caption d-none d-md-block">
-					    		<h5>Усть-Каменогорский арматурный завод "УКАЗ"</h5>
-					    		<p>Более 40 лет проектирует, разрабатывает, производит и осуществляет поставку трубопроводной арматуры и нефтегазопромыслового оборудования.</p>
-					    	</div>
-					    </div>
-					    <div class="carousel-item carousel-item-partners">
-					    	<img src="/assets/images/emerson-electric-1.svg" class="d-block w-100" alt="...">
-					    	<div class="carousel-caption d-none d-md-block">
-					    		<h5>Emerson Automation Solutions</h5>
-					    		<p>Инновационные программы, системы управления и контроля автоматизаци процессов предприятий и измерительное оборудование.</p>
-					    	</div>
-					    </div>
-					</div>
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					    <span class="visually-hidden">Previous</span>
@@ -133,13 +75,7 @@
     		<?php include(__DIR__."/assets/footer.html") ?>
 		</div>
 
-		<!-- Back to top button -->
-		<div style="position: fixed; top: 87%; left: 4%;">
-			<a href="#nav">
-				<svg xmlns="http://www.w3.org/2000/svg" width="48" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16"> <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/> </svg>
-			</a>
-		</div>
-		<!-- Back to top button -->
+   		<?php include(__DIR__."/assets/totopbutton.html") ?>
 
 		<?php include(__DIR__.'/assets/jsblock.html'); ?>
 	</body>

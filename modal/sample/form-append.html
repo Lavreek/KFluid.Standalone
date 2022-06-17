@@ -1,15 +1,16 @@
 <div class='container'>
 	<div class='row justify-content-center'>
 		<div class='col-md-5 px-4'>
-			<form method='POST' action='./append/' enctype="multipart/form-data">
+			<form method='POST' action='./append/' enctype="multipart/form-data" autocomplete="off">
 				<input type='hidden' name='add'>
 				<input type='hidden' name='img_src'>
-
 				<div class='mb-3'>
 					<label for='exampleDataList' class='form-label'>Раздел</label>
 					<input class='form-control' list='datalistOptions' id='exampleDataList' name='section' placeholder='Напишите, чтобы найти...'>
 					<datalist id='datalistOptions'>
+						<option value='preview'>
 						<option value='services'>
+						<option value='partners'>
 					</datalist>
 				</div>
 				<div class='mb-3'>
@@ -30,13 +31,15 @@
 			</form>
 		</div>
 		<div class='col-md-5 px-4'>
-			<form method='POST' action='./append/'>
+			<form method='POST' action='./append/' autocomplete="off">
 				<input type='hidden' name='delete'>
 				<div class='mb-3'>
 					<label for='exampleDataList' class='form-label'>Раздел</label>
 					<input class='form-control' list='datalistOptions' id='exampleDataList' name='section' placeholder='Напишите, чтобы найти...'>
 					<datalist id='datalistOptions'>
+						<option value='preview'>
 						<option value='services'>
+						<option value='partners'>
 					</datalist>
 				</div>
 				<div class='mb-3'>

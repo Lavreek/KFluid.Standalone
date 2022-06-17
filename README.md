@@ -37,5 +37,5 @@
 Array = [<br>
 >'img_src' => 'путь до файла', (CAN BE NULL)<br>
 >'header' => 'заголовок', (NOT NULL)<br>
->'description' => 'описание', (CAN BE NULL)<br>
-]
+>'description' => 'описание', (CAN BE NULL)
+<br>]

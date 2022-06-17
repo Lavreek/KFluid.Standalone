@@ -23,8 +23,8 @@ $("#nav ul li a[href^='#']").on('click', function(e) {
 window.addEventListener('scroll', function() {
     let scrollToTop = document.querySelector('.bi-arrow-up-circle-fill');
 
-    if (pageYOffset > 600 && scrollToTop.style.opacity != .8)
+    if (pageYOffset > 800 && scrollToTop.style.opacity != .8)
         scrollToTop.style.opacity = .8;
-    if (pageYOffset < 600 && scrollToTop.style.opacity != 0)
+    if (pageYOffset < 800 && scrollToTop.style.opacity != 0)
         scrollToTop.style.opacity = 0;
 });
