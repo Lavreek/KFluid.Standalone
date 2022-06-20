@@ -1,6 +1,6 @@
 # Fluid.kz
 
-Cайт проекта: <a href="https://fluid.kz/">https://fluid.kz/</a>
+Cайт проекта: <a href="https://fluid.kz/">https://fluid.kz/</a><br>
 github: https://github.com/Lavreek/fluid_kz
 
 # Используемые компоненты

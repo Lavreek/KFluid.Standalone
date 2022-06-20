@@ -3,7 +3,7 @@
 	{
 		if ($value->description == "")
 			$value->description = "<p class='card-text text-muted'>".$value->header."</p>";
-		
+
 		else
 			$value->description = "<p class='card-text'>".$value->description."</p>";
 

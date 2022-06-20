@@ -1,5 +1,5 @@
 <?php
-	
+
 	$indicators = $inner = "";
 
 	foreach ($services as $key => $value)
@@ -8,16 +8,16 @@
 		{
 			$indicators .= "<button type='button' data-bs-target='#preview' data-bs-slide-to='".$key."' class='active' aria-current='true'></button>";
 			$inner .= 
-				"<div class='carousel-item active' id='carousel-item-id-".$value->header."' >
-					<img src='".$value->img_src."' height='500'>
+				"<div class='carousel-item preview-layout active' id='carousel-item-id-".$value->header."' >
+					<img src='".$value->img_src."'>
 				</div>";
 		}
 		else
 		{
 			$indicators .= "<button type='button' data-bs-target='#preview' data-bs-slide-to='".$key."'></button>";
 			$inner .= 
-				"<div class='carousel-item' id='carousel-item-id-".$value->header."'>
-					<img src='".$value->img_src."' height='500'>
+				"<div class='carousel-item preview-layout'  id='carousel-item-id-".$value->header."'>
+					<img src='".$value->img_src."'>
 				</div>";
 		}
 	}

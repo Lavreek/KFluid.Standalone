@@ -10,10 +10,12 @@
 		if (!empty($_POST['section']) && !empty($_POST['header']))
 		{
 			$section = $_POST['section']; unset($_POST['section']);
+			$img_name = $_POST['img_new_name']; unset($_POST['img_new_name']);
+
 
 			if (isset($_FILES['img_file']))
 			{
-				$_POST['img_src'] = $component->download_image($_FILES['img_file'], $section);
+				$_POST['img_src'] = $component->download_image($_FILES['img_file'], $section, $img_name);
 			}
 
 			$component->json_append($_POST, $section);

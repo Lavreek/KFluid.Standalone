@@ -9,9 +9,9 @@
 		const debug = true;
 
 		const filepath = [
-			"preview" => __DIR__."/preview/preview",
-			"services" => __DIR__."/services/services",
-			"partners" => __DIR__."/partners/partners",
+			"preview" => __DIR__."/memory/preview",
+			"services" => __DIR__."/memory/services",
+			"partners" => __DIR__."/memory/partners",
 		];
 
 		public function get_resource(string $filekey)
