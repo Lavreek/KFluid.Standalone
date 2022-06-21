@@ -4,6 +4,10 @@ body { }
 	margin-left: 10%;
 }
 
+.services-image {
+	border-radius: 12px 12px 12px 12px;
+}
+
 .carousel:hover .carousel-control-prev,  .carousel:hover .carousel-control-next {
 	transition: .5s;
 	background: rgba(0, 0, 0, .4);
@@ -186,8 +190,9 @@ body { }
 }
 
 .partners-layout img {
-	max-height: 256px;
-	margin-bottom: 15%;
+	max-height: 192px;
+	min-height: 192px;
+	margin-bottom: 13%;
 }
 
 .preview-layout img {

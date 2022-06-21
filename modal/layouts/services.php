@@ -10,8 +10,8 @@
 		echo "
 <div class='col'>
 	<div class='row justify-content-center'>
-		<div class='container col text-center'>
-			<img class='rounded-circle' src='".$value->img_src."'>
+		<div class='container col text-center py-3'>
+			<img class='services-image' src='".$value->img_src."'>
 		</div>
 		<div class='col col-md-8 py-4'>
 			<div class='card-body'>
