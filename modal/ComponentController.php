@@ -6,7 +6,7 @@
 	 */
 	class ComponentController extends ImageController
 	{
-		const debug = true;
+		const debug = false;
 
 		const filepath = [
 			"preview" => __DIR__."/memory/preview",
