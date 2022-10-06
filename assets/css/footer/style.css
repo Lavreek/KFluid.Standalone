@@ -1,0 +1,109 @@
+footer {
+    margin-top: 1em;
+    padding: 2rem 6vw;
+}
+
+.footer-container {
+    justify-content: space-between;
+}
+
+.cellar {
+    margin-top: 2em;
+}
+
+footer .contacts a {
+    padding: 8px 32px;
+}
+
+@media screen and (max-width: 1025px) {
+    footer {
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    footer .link-contacts {
+        font-size: 16px!important;
+    }
+
+    .cellar .company-info {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    footer {
+        padding: 1rem 1rem;
+    }
+
+    footer .link-contacts {
+        font-size: 14px!important;
+    }
+
+    .cellar .company-info {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 541px) {
+    footer {
+        padding: 0 0;
+    }
+    footer .contacts a {
+        padding: 8px 16px;
+    }
+    footer .link-contacts {
+        font-size: 12px!important;
+    }
+
+    .cellar .company-info {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    footer .link-contacts {
+        font-size: 10px!important;
+    }
+
+    footer .contacts a {
+        padding: 8px 8px;
+    }
+
+    .cellar {
+        margin-top: 1.75em;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    footer .link-contacts {
+        font-size: 10px!important;
+    }
+
+    footer .contacts a {
+        padding: 8px 8px;
+    }
+
+    .cellar {
+        margin-top: 1.5em;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    footer {
+        padding: 1em .5em;
+    }
+
+    footer .link-contacts {
+        font-size: 10px!important;
+    }
+
+    footer .contacts a {
+        padding: 0 0;
+        text-align: right;
+    }
+
+    .cellar {
+        margin-top: 1em;
+    }
+}
