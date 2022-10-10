@@ -6,7 +6,7 @@
 	 */
 	class ComponentController extends ImageController
 	{
-		const debug = false;
+		const debug = true;
 
 		const filepath = [
 			"preview" => __DIR__."/memory/preview",
@@ -62,21 +62,19 @@
 
 		public function json_remove(string $header, string $filekey)
 		{
-			if (self::debug) 
-			{
-				if (isset(self::filepath[$filekey]))
-				{
+			if (self::debug) {
+				if (isset(self::filepath[$filekey])) {
 					$filepath = $this->file_alive(self::filepath[$filekey]);
 
-					$file_content = json_decode(file_get_contents($filepath));
+					$file_content = json_decode(file_get_contents($filepath), true);
 
-					foreach ($file_content as $key => $value)
-					{
-						if ($value->header == $header)
-						{
-							if (!empty($value->img_src))
-								if(!is_dir($value->img_src))
-									unlink(__DIR__."/../".$value->img_src);
+					foreach ($file_content as $key => $value) {
+						if ($value['header'] == $header) {
+							if (!empty($value['img_src'])) {
+                                if(!is_dir($value['img_src'])) {
+                                    unlink(__DIR__."/../".$value['img_src']);
+                                }
+                            }
 
 							unset($file_content[$key]);
 						}

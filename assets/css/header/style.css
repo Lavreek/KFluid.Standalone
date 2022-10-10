@@ -1,5 +1,5 @@
 header {
-    padding: 2rem 6vw;
+    padding: 1rem 6vw;
     align-items: center;
 }
 
@@ -24,8 +24,6 @@ header {
 }
 
 @media screen and (max-width: 1921px) {
-
-
     .nav-link {
         font-family: 'Inter';
         font-style: normal;
@@ -42,8 +40,6 @@ header {
         padding: 8px 16px!important;
         text-align: right;
     }
-
-
 
     .header-logo {
         width: 410px;
@@ -68,7 +64,7 @@ header {
 
 @media screen and (max-width: 1441px) {
     header {
-        padding: 2rem 4rem;
+        padding: 1rem 4rem;
     }
 
     .header-logo {

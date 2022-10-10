@@ -1,0 +1,114 @@
+.carousel {
+    margin: 0 -12px;
+    margin-bottom: 2rem;
+}
+
+.preview-layout img {
+    min-height: auto;
+    max-height: none;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    background: rgba(0, 0, 0, 1);
+    filter: invert(100%);
+}
+
+.carousel-indicators .active {
+    filter: none!important;
+}
+
+.carousel:hover .carousel-control-prev, .carousel:hover .carousel-control-next {
+    background: rgba(0, 0, 0, 1)!important;
+}
+
+.carousel-indicators button {
+    filter: invert(1);
+    border-top: 0px solid transparent!important;
+    border-bottom: 4px solid transparent!important;
+}
+
+
+@media screen and (max-width: 1920px) {
+
+}
+@media screen and (max-width: 1441px) {
+    .preview-layout img {
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 1141px) {
+    .preview-layout img {
+        max-height: 350px;
+    }
+}
+
+@media screen and (max-width: 721px) {
+    .preview-layout img {
+        min-height: 260px;
+        max-height: 260px;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        width: 6%!important;
+    }
+}
+
+@media screen and (max-width: 541px) {
+    .preview-layout img {
+        min-height: 240px;
+        max-height: 240px;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        background: rgba(0, 0, 0, 1);
+        width: 8%!important;
+    }
+
+    .carousel-indicators button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .preview-layout img {
+        min-height: 210px;
+        max-height: 210px;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        background: rgba(0, 0, 0, 1);
+        width: 8%!important;
+    }
+
+    .carousel-indicators button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .preview-layout img {
+        min-height: 210px;
+        max-height: 210px;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        background: rgba(0, 0, 0, 1);
+        width: 8%!important;
+    }
+
+    .carousel-indicators button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .preview-layout img {
+        min-height: 170px;
+        max-height: 170px;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        width: 14%!important;
+    }
+}

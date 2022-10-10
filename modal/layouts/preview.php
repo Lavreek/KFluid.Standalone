@@ -26,6 +26,6 @@
 		<div class='carousel-indicators'>
 			$indicators
 		</div>
-		<div class='carousel-inner text-center py-5'>
+		<div class='carousel-inner text-center'>
 			$inner
 		</div>";
