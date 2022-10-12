@@ -3,7 +3,52 @@ $('.card-question').on('click', function(event) {
         $(this).removeClass("active");
     else
         $(this).toggleClass('active');
+});
+
+$(document).ready(function () {
+    $.cookie('width', $(window).width());
 })
+
+$('.btn-collapse').on('click', function () {
+    if ($(this).hasClass('img-collapsed')) {
+
+        anime({
+            targets: '.btn-collapse',
+            translateY: 0,
+            easing: 'easeInOutExpo',
+            duration: 200
+        });
+
+        anime({
+            targets: '.collapse-links',
+            translateX: 0,
+            easing: 'easeInOutExpo',
+            duration: 200
+        });
+
+        $('.btn-collapse-img').attr('src', '/assets/images/header-burger.svg');
+        $(this).removeClass('img-collapsed')
+    } else {
+        $(this).addClass('img-collapsed');
+
+        anime({
+            targets: '.btn-collapse',
+            translateY: 125,
+            easing: 'easeInOutExpo',
+            duration: 200
+        });
+
+        anime({
+            targets: '.collapse-links',
+            translateX: 50,
+            easing: 'easeInOutExpo',
+            duration: 200
+        });
+
+        $('.btn-collapse-img').attr('src', '/assets/images/header-collapse.svg');
+
+    }
+});
 
 $("#nav ul li a[href^='#']").on('click', function(e) {
     e.preventDefault();

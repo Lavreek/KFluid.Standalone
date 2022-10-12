@@ -45,19 +45,39 @@ footer .contacts a {
     }
 }
 
+@media (max-width: 576px) {
+    footer .footer-container {
+        display: block!important;
+    }
+
+    footer .contacts {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .logos {
+        display: none;
+    }
+    .cellar {
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 541px) {
     footer {
         padding: 0 0;
     }
+
     footer .contacts a {
         padding: 8px 16px;
     }
+
     footer .link-contacts {
-        font-size: 12px!important;
+        font-size: 15px!important;
     }
 
     .cellar .company-info {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
@@ -94,8 +114,14 @@ footer .contacts a {
         padding: 1em .5em;
     }
 
-    footer .link-contacts {
-        font-size: 10px!important;
+    footer .footer-link {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 27px;
+        text-align: right;
+        color: #0177A6;
     }
 
     footer .contacts a {

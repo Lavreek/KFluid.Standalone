@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<?php include(__DIR__.'/assets/head.html'); ?>
+
+		<title>Главная страница</title>
+		<link rel="stylesheet" href="/assets/css/main/style.css?t=<?= time(); ?>">
 	</head>
 	<body class="container-fluid">
     	<?php include(__DIR__."/assets/googletagmanager.html") ?>
@@ -42,6 +45,7 @@
 			<!-- Services -->
 
 			<!-- Partners -->
+			<noindex>
 			<div class="container-fluid text-center" id="partners">
 				<div class="jumbotron text-center py-5">
 					<h1 class="display-4">Наши Партнёры и клиенты</h1>
@@ -61,6 +65,7 @@
 					</button>
 				</div>
 			</div>
+			</noindex>
 			<!-- Partners -->
 
     		<?php include(__DIR__."/assets/footer.html") ?>

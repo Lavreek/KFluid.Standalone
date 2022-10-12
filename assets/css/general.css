@@ -1,4 +1,21 @@
-body { }
+div, p, h1, h2, h3, h4, h5, span, label, button {
+	font-family: 'Inter';
+	font-style: normal;
+}
+
+.page-title {
+	margin: 1em 0;
+
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+	text-align: center;
+	text-transform: uppercase;
+
+	color: #0177A6;
+}
+
+/* OLD */
 
 .services-icons li + li {
 	margin-left: 10%;
@@ -176,13 +193,7 @@ body { }
 	text-decoration: none;
 }
 
-.link-phone-label::before {
-	content: "Телефон: ";
-}
 
-.link-mail-label::before {
-	content: "Email: ";
-}
 
 .link-phone:hover, .link-mail:hover {
 	transition: .5s;

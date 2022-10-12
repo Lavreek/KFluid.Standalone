@@ -1,7 +1,10 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 	<head>
 		<?php include(__DIR__.'/../assets/head.html'); ?>
+
+		<title>Контакты</title>
+		<link rel="stylesheet" href="/assets/css/contacts/style.css?t=<?= time(); ?>">
 	</head>
 	<body class="container-fluid" >
     	<?php include(__DIR__."/../assets/googletagmanager.html") ?>
@@ -11,21 +14,23 @@
     		<?php include(__DIR__."/../assets/header.html") ?>
     		<!-- About -->
     		<div class="container" style="min-height: 50vh!important;">
-    			<div class="jumbotron text-center py-5">
-					<p class="display-6">Контакты</p>
+    			<div class="jumbotron text-center">
+					<p class="page-title">Контакты</p>
 					<hr class="my-4">
 					<p>
-						<div class="row">
-							<div class="col" style="min-width: 400px; min-height: 400px;">
+						<div class="contacts-body">
+							<div class="cbody-map">
 								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A99397f4d811576b166925f445cd0e61e5b70345751723261c44a26538964942b&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
 							</div>
-							<div class="col-md-6" style="text-align: left;">
-								<h5 class="display-7"><b>КФлюид ТОО</b></h5>
-								<br>
-								<b><h5 class="mb-3"><a href="mailto:mail@fluid.kz" class="display-7 lead link-mail link-dark link-mail-label" style="font-weight: normal!important;">mail@fluid.kz</a></h5>									
-								<h5 class="mb-3"><a href="tel:+77273499466" class="display-7 lead link-phone link-dark link-phone-label" style="font-weight: normal!important;">+7 (727) 349 9466</a></h5></b>
-								<p>Адрес офиса: 050000, Алматы, проспект Нурсултана Назарбаева, 113/55, 40</p>
-								<p>Время работы: с 9:00 до 17:30 (пн-пт)</p>
+							<div class="cbody-info">
+								<p class="info-title info-text"></p>
+								<span class="info-text">
+									<a href="mailto:mail@fluid.kz" class="text-mail">mail@fluid.kz</a>
+									<br>
+									<a href="tel:+77273499466" class="text-phone">+7 (727) 349 9466</a>
+									<p>Адрес офиса: 050000, Алматы, проспект Нурсултана Назарбаева, 113/55, 40</p>
+									<p>Время работы: с 9:00 до 17:30 (пн-пт)</p>
+								</span>
 							</div>
 						</div>
 					</p>
@@ -33,7 +38,9 @@
     		</div>
 			<!-- About -->
 
-    		<?php include(__DIR__."/../assets/footer.html") ?>
+			<?php
+				include(__DIR__."/../assets/footer.html");
+			?>
 		</div>
 
 		<?php include(__DIR__."/../assets/totopbutton.html") ?>
