@@ -83,11 +83,8 @@ footer .contacts a {
 
 @media screen and (max-width: 426px) {
     footer .link-contacts {
-        font-size: 10px!important;
-    }
-
-    footer .contacts a {
-        padding: 8px 8px;
+        padding: 0 1rem!important;
+        font-size: 12px!important;
     }
 
     .cellar {
@@ -96,14 +93,6 @@ footer .contacts a {
 }
 
 @media screen and (max-width: 376px) {
-    footer .link-contacts {
-        font-size: 10px!important;
-    }
-
-    footer .contacts a {
-        padding: 8px 8px;
-    }
-
     .cellar {
         margin-top: 1.5em;
     }
@@ -122,11 +111,6 @@ footer .contacts a {
         line-height: 27px;
         text-align: right;
         color: #0177A6;
-    }
-
-    footer .contacts a {
-        padding: 0 0;
-        text-align: right;
     }
 
     .cellar {

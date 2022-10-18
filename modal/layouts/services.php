@@ -8,17 +8,18 @@
 			$value->description = "<p class='card-text'>".$value->description."</p>";
 
 		echo "
-<div class='col'>
-	<div class='row justify-content-center'>
-		<div class='container col text-center py-3'>
-			<img class='services-image' src='".$value->img_src."'>
-		</div>
-		<div class='col col-md-8 py-4'>
-			<div class='card-body'>
-				<h5 class='card-title mb-3'>".$value->header."</h5>
-				".$value->description."
-			</div>
-		</div>
-	</div>
+<div class='production-preview'>
+    <div class='production-focus'>
+        <div class='production-header'>
+            <span>".$value->header."</span>
+        </div>
+        <div class='production-image'>
+            <img class='services-image' src='".$value->img_src."'>
+        </div>
+    </div>
+    <div class='production-info'>
+        <div class='production-header'>".$value->header."</div>
+        <span class='production-description'>".$value->description."</span>
+    </div>
 </div>";
 	}

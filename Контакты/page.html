@@ -6,17 +6,18 @@
 		<title>Контакты</title>
 		<link rel="stylesheet" href="/assets/css/contacts/style.css?t=<?= time(); ?>">
 	</head>
-	<body class="container-fluid" >
+	<body>
     	<?php include(__DIR__."/../assets/googletagmanager.html") ?>
 
 		<div data-spy="scroll" data-offset="0" >
-			
-    		<?php include(__DIR__."/../assets/header.html") ?>
-    		<!-- About -->
+			<div class="container-fluid container-header">
+    			<?php include(__DIR__."/../assets/header.html") ?>
+			</div>
+
+			<!-- About -->
     		<div class="container" style="min-height: 50vh!important;">
     			<div class="jumbotron text-center">
 					<p class="page-title">Контакты</p>
-					<hr class="my-4">
 					<p>
 						<div class="contacts-body">
 							<div class="cbody-map">

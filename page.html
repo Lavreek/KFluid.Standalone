@@ -31,12 +31,12 @@
 
 			<!-- Services -->
 			<div class="container-fluid p-2" id="services">
-				<div>
-					<h1 class="px-5 services-header">
+				<div class="d-flex justify-content-center align-items-center">
+					<h1 class="page-title">
 						Продукция
 					</h1>
 				</div>
-				<div class="row row-cols-1 row-cols-md-2 g-4 py-5">
+				<div class="container-productions">
 
 					<?php $component->get_resource("services"); ?>
 
@@ -46,10 +46,9 @@
 
 			<!-- Partners -->
 			<noindex>
-			<div class="container-fluid text-center" id="partners">
-				<div class="jumbotron text-center py-5">
-					<h1 class="display-4">Наши Партнёры и клиенты</h1>
-					<hr class="my-4">
+			<div class="container-partners" id="partners">
+				<div class="d-flex justify-content-center" style="margin-top: 2em; margin-bottom: 4em;">
+					<h1 class="page-title">Наши Партнёры и клиенты</h1>
 				</div>
 				<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
 

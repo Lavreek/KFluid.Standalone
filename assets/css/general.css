@@ -1,3 +1,6 @@
+body {
+	min-width: 320px;
+}
 div, p, h1, h2, h3, h4, h5, span, label, button {
 	font-family: 'Inter';
 	font-style: normal;
@@ -15,14 +18,17 @@ div, p, h1, h2, h3, h4, h5, span, label, button {
 	color: #0177A6;
 }
 
+@media (max-width: 321px) {
+	.page-title {
+		font-size: 22px;
+		line-height: 27px;
+	}
+}
+
 /* OLD */
 
 .services-icons li + li {
 	margin-left: 10%;
-}
-
-.services-image {
-	border-radius: 12px 12px 12px 12px;
 }
 
 .carousel:hover .carousel-control-prev,  .carousel:hover .carousel-control-next {

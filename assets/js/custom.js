@@ -6,7 +6,14 @@ $('.card-question').on('click', function(event) {
 });
 
 $(document).ready(function () {
-    $.cookie('width', $(window).width());
+    if ($.cookie('width') == null) {
+        $.cookie('width', $(window).width());
+        window.location.reload();
+    }
+    if ($(window).width() != $.cookie('width')) {
+        $.cookie('width', $(window).width());
+        window.location.reload();
+    }
 })
 
 $('.btn-collapse').on('click', function () {

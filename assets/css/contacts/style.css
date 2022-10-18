@@ -1,3 +1,9 @@
+@media (max-width: 1440px) {
+    .container-header {
+        background: #E2E2E2;
+    }
+}
+
 .container {
     margin-top: 1em;
 }
@@ -80,8 +86,19 @@
 }
 
 @media screen and (max-width: 426px) {
+    .page-title {
+        margin-bottom: 2em;
+    }
+
     .info-title:before {
-        content: "КФлюид ТОО";
+        content: "Компания КФлюид";
+        font-width: 700;
+    }
+
+    .info-text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
     }
 
     .cbody-map {
@@ -119,6 +136,9 @@
 }
 
 @media screen and (max-width: 321px) {
+    .cbody-info {
+        padding: 0 .75rem;
+    }
     .cbody-map iframe {
         width: 275px;
         height: 200px;

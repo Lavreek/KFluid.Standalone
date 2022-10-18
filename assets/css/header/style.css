@@ -2,6 +2,16 @@ header {
     padding: 1rem 6vw;
     align-items: center;
 }
+
+.logos {
+    display: flex;
+    min-height: 60px;
+}
+
+.logos a {
+    margin: auto;
+}
+
 .collapse-items {
     display: flex;
     justify-content: space-between;
@@ -21,8 +31,10 @@ header {
 }
 
 header .navbar-collapse .contacts {
-    display: none;
+    display: flex;
+    /*display: none;*/
 }
+
 
 @media (min-width: 1921px) {
     header {
@@ -151,7 +163,7 @@ header .navbar-collapse .contacts {
     }
 
     .nav-link {
-        padding: 8px 0;
+        padding: 4px .5rem;
         font-size: 15px!important;
     }
 
@@ -179,7 +191,7 @@ header .navbar-collapse .contacts {
 }
 
 @media (min-width: 576px) {
-    header .collapse-items {
+    header .btn-collapse {
         display: none!important;
     }
 
@@ -192,6 +204,26 @@ header .navbar-collapse .contacts {
     header {
         padding: 1rem 1rem!important;
         align-items: center!important;
+    }
+
+    header .navbar-collapse .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .navbar-collapse .links ul {
+        display: block;
+        text-align: center;
+    }
+
+    header .navbar-collapse .contacts {
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .navbar-collapse .contacts .contacts-item a {
+        text-align: center;
     }
 
     .header-logo {
@@ -214,6 +246,14 @@ header .navbar-collapse .contacts {
     
     header .nav li {
         padding: 8px 0!important;
+        max-width: 200px;
+    }
+
+    header .nav-link {
+        padding: 8px 0;
+    }
+    .navbar-collapse {
+        padding-bottom: 1em;
     }
 }
 
